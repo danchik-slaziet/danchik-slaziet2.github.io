@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    letter-spacing: -0.015em;
+}
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+html,
+body {
+    background: #fff; //здесь делаешь дефолтный фон для всей страницы, что будет за пределами блока
+    height: 100%;
+    width: 100%;
+    font-size: 16px; //если у тебя другой дефолтный размер шрифта - ставь его
+    line-height: 1;
+    line-height: 150%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+
+#root {
+    overflow-x: hidden;
+}
+
+body.no-scroll {            //служебный класс, который ты ставишь через js на body.
+    height: 100vh;          //нужен в ситуациях, когда у тебя всплывающее окно на весь экран, или, например, бургер на мобилках
+    overflow-y: hidden;     //чтобы не скролилось на фоне, когда у тебя весь экран перекрыт
+    padding-right: 16px;
+}
+
+.header-no-scroll {         //такой же служебный класс, только для шапки, тоже нужно ставить вручную через js
+    width: calc(100% - 16px) !important;
+    margin-right: 16px;
+}
+@media (max-wdith: 480px) {
+    body.no-scroll {
+        height: 100vh;
+        overflow-y: hidden;
+        padding-right: 0;
+    }
+    .header-no-scroll {
+        width: 100% !important;
+        margin-right: 0;
+    }
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+img::selection {
+    background: space;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
